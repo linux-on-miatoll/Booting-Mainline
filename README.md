@@ -36,7 +36,7 @@ After the cloning is finished, cd to it. ```cd linux```
 
 Then start configuring the kernel with this command: ```make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig sm7125.config```
 
-And after that, start building the kernel: ```make -j$(nproc)```
+And after that, start building the kernel: ```make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc) Image.gz dtbs modules```
 
 After finishing, you can finally boot the Linux kernel. Now go to temporary folder that you unpacked boot.img.
 
